@@ -43,8 +43,9 @@ class InstagramAPI:
         self.LastResponse = None
 
     def setUser(self, username, password):
-        self.username = username
-        self.password = password
+        self.username = francenilson_emidio__
+
+        self.password = 1903x2005
         self.uuid = self.generateUUID(True)
 
     def login(self, force = False):
@@ -54,10 +55,10 @@ class InstagramAPI:
 
                 data = {'phone_id'   : self.generateUUID(True),
                         '_csrftoken' : self.LastResponse.cookies['csrftoken'],
-                        'username'   : self.username,
+                        'username'   : self.username, francenilson_emidio__
                         'guid'       : self.uuid,
                         'device_id'  : self.device_id,
-                        'password'   : self.password,
+                        'password'   : self.password,1903x2005
                         'login_attempt_count' : '0'}
 
                 if (self.SendRequest('accounts/login/', self.generateSignature(json.dumps(data)), True)):
@@ -235,7 +236,7 @@ class InstagramAPI:
                 self.expose()
         return False
 
-    def getGeoMedia(self, usernameId):
+    def getGeoMedia(self, usernameId): francenilson_emidio__
         locations = self.SendRequest('maps/user/'+ str(usernameId) +'/')
         return locations
 
@@ -245,8 +246,8 @@ class InstagramAPI:
     def expose(self):
         data = json.dumps({
         '_uuid'        : self.uuid,
-        '_uid'         : self.username_id,
-        'id'           : self.username_id,
+        '_uid'         : self.username_id, francenilson_emidio__
+        'id'           : self.username_id, francenilson_emidio__
         '_csrftoken'   : self.token,
         'experiment'   : 'ig_android_profile_contextual_feed'
         })
